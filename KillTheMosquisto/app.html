@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Kill The Mosquisto</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="game.js"></script>
+</head>
+
+<body onresize="adjustGameField()">
+
+	<div class="panel">
+
+		<div class="lives">
+
+			<img id="l1" src="imgs/full_heart.png" />
+			<img id="l2" src="imgs/full_heart.png">
+			<img id="l3" src="imgs/full_heart.png">
+		</div>
+
+		<div class="stopwatch">
+
+			Remaining time: <span id="stopwatch"></span>
+
+		</div>
+
+	</div>
+
+	<script>
+
+		document.getElementById('stopwatch').innerHTML = timer
+
+		var createMosquito = setInterval(function () {
+			randomPosition()
+		}, createMosquitoTimer)
+
+
+	</script>
+</body>
+
+</html>
